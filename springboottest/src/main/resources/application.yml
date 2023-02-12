@@ -4,21 +4,40 @@ server:
 
 
 spring:
+  jpa:
+    # DDL 정의시 데이터베이스의 고유 기능을 사용합니다.
+    # ex) 테이블 생성, 삭제 등
+    generate-ddl: true
+    # MySQL 을 사용할 것.
+    database: mysql
+    # API 호출시, SQL 문을 콘솔에 출력한다.
+    show-sql: true
+    # MySQL 상세 지정
+    database-platform: org.hibernate.dialect.MySQL8Dialect
   # 로그 컬렁 설정
   output:
     ansi:
       enabled: always
   # H2 Setting Info (H2 Console에 접속하기 위한 설정정보 입력)
-  h2:
-    console:
-      enabled: true  # H2 Console을 사용할지 여부 (H2 Console은 H2 Database를 UI로 제공해주는 기능)
-      path: /h2-console  # H2 Console의 Path
+  # h2:
+  #   console:
+  #     enabled: true  # H2 Console을 사용할지 여부 (H2 Console은 H2 Database를 UI로 제공해주는 기능)
+  #     path: /h2-console  # H2 Console의 Path
   # Database Setting Info (Database를 H2로 사용하기 위해 H2연결 정보 입력)
   datasource:
-    url: jdbc:h2:~/test
-    username: sa
-    password: 
-    driver-class-name: org.h2.Driver
+    # 커넥션 풀 관리 설정
+    hikari: 
+      maximum-pool-size: 10
+    # H2 데이터 베이스 설정
+    # url: jdbc:h2:~/test
+    # username: sa
+    # password: 
+    # driver-class-name: org.h2.Driver
+    # MySQL 데이터 베이스 설정
+    url: jdbc:mysql://localhost:3306/springboot?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    username: root  
+    password: qkrwlsdud1@
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 
 logging:
