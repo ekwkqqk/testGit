@@ -1,4 +1,5 @@
 module.exports = {
+  ssr: false,
   /*
   ** Headers of the page
   */
@@ -16,7 +17,31 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    [
+      '@nuxtjs/i18n',
+      {
+        // 대응할 언어들 셋팅
+        locales: [
+          { code: 'ko', name: 'Korean', iso: 'ko_KR', file: 'ko/index.js' },
+          { code: 'en', name: 'English', iso: 'en_US', file: 'en/index.js' },
+        ],
+        defaultLocale: 'ko',
+        langDir: 'locales/',
+        strategy: 'no_prefix',
+        vueI18n: {
+          fallbackLocale: 'ko',
+        },
+        lazy: true,
+        vueI18nLoader: true,
+        vuex: {
+          moduleName: 'i18n',
+          syncLocale: true,
+          syncMessages: true,
+          syncRouteParams: true,
+        }
+      }
+    ]
   ],
   axios: {
     proxy: true
@@ -24,7 +49,7 @@ module.exports = {
   proxy: {
     '/api': {
         target: 'http://localhost:8081/',
-        changeOrigin: true // cross origin 허용 
+        changeOrigin: true // cross origin 허용
     }
   },
   plugins: ['~/plugins/vuetify.js'],

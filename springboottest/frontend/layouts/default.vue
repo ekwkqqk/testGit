@@ -89,7 +89,9 @@
         items: [
           { icon: 'apps', title: 'Welcome', to: '/' },
           { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' },
-          { icon: 'bubble_chart', title: 'Test', to: '/test' }
+          { icon: 'login', title: 'Login', to: '/login' },
+          { icon: 'supervised_user_circle', title: 'User Registration', to: '/registration' },
+          { icon: 'translate', title: 'Translation', to: '/i18n' }
         ],
         miniVariant: false,
         right: true,
