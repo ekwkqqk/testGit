@@ -1,2 +1,43 @@
 2023-02-18 10:28:19.118  WARN 1484 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=11h57m26s401ms104?s500ns).
 2023-02-18 11:22:42.074  WARN 1484 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=35m10s790ms152?s400ns).
+2023-02-18 15:43:50.098  INFO 16344 --- [restartedMain] c.e.s.SpringboottestApplication          : Starting SpringboottestApplication using Java 11 on DESKTOP-OJAGNA2 with PID 16344 (D:\testGit\springboottest\bin\main started by ekwkq in D:\testGit\springboottest)
+2023-02-18 15:43:50.117  INFO 16344 --- [restartedMain] c.e.s.SpringboottestApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-02-18 15:43:50.388  INFO 16344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-18 15:43:50.390  INFO 16344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-18 15:43:53.015  INFO 16344 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-18 15:43:53.104  INFO 16344 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
+2023-02-18 15:43:56.846  INFO 16344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-02-18 15:43:56.892  INFO 16344 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-18 15:43:56.897  INFO 16344 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-18 15:43:57.271  INFO 16344 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-18 15:43:57.285  INFO 16344 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6893 ms
+2023-02-18 15:43:58.346  INFO 16344 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-18 15:43:58.925  INFO 16344 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-18 15:43:59.090  INFO 16344 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-18 15:43:59.391  INFO 16344 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-02-18 15:44:00.366  INFO 16344 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-18 15:44:01.071  INFO 16344 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-18 15:44:04.054  INFO 16344 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-18 15:44:04.074  INFO 16344 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-18 15:44:04.480  WARN 16344 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-18 15:44:05.690 DEBUG 16344 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-02-18 15:44:06.759 DEBUG 16344 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2023-02-18 15:44:07.001 DEBUG 16344 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-02-18 15:44:07.274 DEBUG 16344 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-02-18 15:44:08.479  INFO 16344 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-18 15:44:09.096  INFO 16344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-02-18 15:44:09.275  INFO 16344 --- [restartedMain] c.e.s.SpringboottestApplication          : Started SpringboottestApplication in 21.127 seconds (JVM running for 29.572)
+2023-02-18 15:44:16.810  INFO 16344 --- [http-nio-8081-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-18 15:44:16.827  INFO 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-18 15:44:16.836 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-02-18 15:44:16.840 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-02-18 15:44:16.842 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-02-18 15:44:16.845 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2fff11e5
+2023-02-18 15:44:16.848 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b6417cb
+2023-02-18 15:44:16.849 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-18 15:44:16.851  INFO 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2023-02-18 15:44:16.873 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/helloWorld", parameters={}
+2023-02-18 15:44:16.895 DEBUG 16344 --- [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.springboottest.controller.TestController#helloWorld()
+2023-02-18 15:44:17.148 DEBUG 16344 --- [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2023-02-18 15:44:17.151 DEBUG 16344 --- [http-nio-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World!"]
+2023-02-18 15:44:17.174 DEBUG 16344 --- [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
