@@ -1,25 +1,27 @@
 package com.example.springboottest.dto;
 
 public class TestDto {
-    
-    private String id;
-    private String createUser;
 
-    public String getId() {
-        return this.id;
+    private String username;
+
+    public String getUsername() {
+        return this.username;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUsername(String username) {
+        this.username = username;
+    };
+    private String password;
+
+    public String getPassword() {
+        return this.password;
     }
 
-    public String getCreateUser() {
-        return this.createUser;
-    }
+    public void setPassword(String password) {
+        this.password = password;
+    };
 
-    public void setCreateUser(String createUser) {
-        this.createUser = createUser;
-    }
+
 
 
 }
