@@ -11,13 +11,13 @@ import com.example.springboottest.dto.TestDto;
 @RestController
 @RequestMapping("/api")
 public class TestController {
-    
+
     @GetMapping(value="/helloWorld")
     public String helloWorld() {
         return "Hello World!";
     }
 
-    @PostMapping("/test/api")
+    @PostMapping(value="/test")
     public TestDto test(@RequestBody TestDto dto) {
         return dto;
     }

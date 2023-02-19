@@ -6,7 +6,7 @@
   >
     <v-container>
       <v-text-field
-        v-model="first"
+        v-model="username"
         color="primary"
         label="User name"
         variant="underlined"
@@ -29,7 +29,7 @@
     <v-card-actions>
       <v-spacer></v-spacer>
 
-      <v-btn color="success">
+      <v-btn color="success" @click="login()">
         Login
 
         <v-icon icon="mdi-chevron-right" end></v-icon>
@@ -42,6 +42,23 @@
     data: () => ({
       username: null,
       password: null
-    })
+    }),
+    methods: {
+      login () {
+        let data = {
+          username: this.username, password: this.password
+        }
+
+        alert(JSON.stringify(data))
+
+        this.$axios.post('/api/test', JSON.stringify(data), {
+          headers: { 'Content-Type': 'application/json' }
+        })
+          .then(res => {
+            console.log(`data: ${res.data.username}`)
+            console.log(`data: ${res.data.password}`)
+          })
+      }
+    }
   }
 </script>
