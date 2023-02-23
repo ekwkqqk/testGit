@@ -26,16 +26,16 @@ spring:
   # Database Setting Info (Database를 H2로 사용하기 위해 H2연결 정보 입력)
   datasource:
     # 커넥션 풀 관리 설정
-    hikari: 
+    hikari:
       maximum-pool-size: 10
     # H2 데이터 베이스 설정
     # url: jdbc:h2:~/test
     # username: sa
-    # password: 
+    # password:
     # driver-class-name: org.h2.Driver
     # MySQL 데이터 베이스 설정
     url: jdbc:mysql://localhost:3306/springboot?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
-    username: root  
+    username: root
     password: qkrwlsdud1@
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -43,9 +43,13 @@ spring:
 logging:
   #로그 파일 생성 위치 설정
   file:
-    path: logs   
+    path: logs
   level:
     org:
       springframework:
         web: DEBUG
- 
+#Mybatis 설정
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**/**.xml
+  configuration:
+    map-underscore-to-camel-case: true

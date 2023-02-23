@@ -1,13 +1,26 @@
 <template>
-  <v-table>
+
+    <v-table
+    fixed-header
+    height="300px"
+  >
     <thead>
       <tr>
-        <th class="text-left">다국어</th>
+        <th class="text-left">
+          Name
+        </th>
+        <th class="text-left">
+          Calories
+        </th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>{{ $t('sunDay') }}</td>
+      <tr
+        v-for="item in desserts"
+        :key="item.name"
+      >
+        <td>{{ item.name }} {{ $t('sunDay') }}</td>
+        <td>{{ item.calories }}</td>
       </tr>
     </tbody>
     <v-btn color="primary" @click="changeLanguage('ko')">KO</v-btn>
@@ -17,8 +30,37 @@
 
 <script>
 export default {
-  name: 'Index',
-  computed: {},
+  name: 'i18',
+  data () {
+    return {
+      desserts: [
+        {
+          name: 'Frozen Yogurt',
+          calories: 159
+        },
+        {
+          name: 'Ice cream sandwich',
+          calories: 237
+        },
+        {
+          name: 'Eclair',
+          calories: 262
+        },
+        {
+          name: 'Cupcake',
+          calories: 305
+        },
+        {
+          name: 'Gingerbread',
+          calories: 356
+        },
+        {
+          name: 'Jelly bean',
+          calories: 375
+        }
+      ]
+    }
+  },
   methods: {
     changeLanguage (lang) {
       this.$i18n.setLocale(lang)
@@ -27,33 +69,3 @@ export default {
 }
 </script>
 
-<style>
-.mt-1 {
-  margin-top: 0.5rem;
-}
-
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.table {
-  min-width: 300px;
-  margin: 0 auto;
-}
-
-th,
-td {
-  width: 50%;
-  height: 40px;
-  line-height: 40px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

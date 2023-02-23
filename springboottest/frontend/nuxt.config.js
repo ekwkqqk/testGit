@@ -15,6 +15,9 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
+  buildModules:[
+
+  ],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
@@ -53,7 +56,9 @@ module.exports = {
         changeOrigin: true // cross origin 허용
     }
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: ['~/plugins/vuetify.js',
+            '~/plugins/apexcharts.js'
+           ],
   css: ['~/assets/style/app.styl'],
   /*
   ** Customize the progress bar color
@@ -63,6 +68,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: true,
     extractCSS: true,
     extend (config, ctx) {
       // Run ESLint on save
@@ -75,5 +81,10 @@ module.exports = {
         })
       }
     }
+  },
+  cli: {
+    badgeMessages: ['Hello World!'],
+    bannerColor: 'red'
   }
+ // target: 'static'
 }
