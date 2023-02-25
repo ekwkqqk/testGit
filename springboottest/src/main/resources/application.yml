@@ -38,6 +38,13 @@ spring:
     username: root
     password: qkrwlsdud1@
     driver-class-name: com.mysql.cj.jdbc.Driver
+  messages:
+    basename: messages/message
+    encoding: UTF-8
+    cache-duration: 30
+    always-use-message-format: true
+    use-code-as-default-message: true
+    fallback-to-system-locale: true
 
 
 logging:
@@ -52,4 +59,5 @@ logging:
 mybatis:
   mapper-locations: classpath:mybatis/mapper/**/**.xml
   configuration:
+  # 스네이크 -> 카멜케이스 변환
     map-underscore-to-camel-case: true

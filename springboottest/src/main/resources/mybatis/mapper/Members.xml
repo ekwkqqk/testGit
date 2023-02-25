@@ -3,7 +3,7 @@
     "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.springboottest.mapper.IMembersDao">
-	<select id="listMembers" resultType="com.example.springboottest.entity.MembersEntity">
+	<select id="listMembers" fetchSize="100" resultType="com.example.springboottest.entity.MembersEntity">
         select id, age, created_date, description, last_modified_date, role_type, name  from members
     </select>
 </mapper>
