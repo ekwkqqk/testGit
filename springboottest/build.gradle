@@ -32,6 +32,8 @@ dependencies {
 	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
 	implementation 'mysql:mysql-connector-java:8.0.32'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	implementation group: 'org.apache.poi', name: 'poi', version: '4.1.2'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2' // .xlsx 를 사용하려면 해당 의존성을 추가해야합니다.
 }
 
 tasks.named('test') {
